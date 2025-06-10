@@ -1,0 +1,40 @@
+# 📦 TCN
+
+**TCN/**  
+├── 📂data/ — 센서 데이터 (원본 및 전처리 버전)  
+│   ├── 📄T_data.csv — 기존 학습 데이터  
+│   ├── 📄T_f_data.csv — Feature 제거 데이터  
+│   ├── 📄T_f_t.csv — 시간 병합 전처리  
+│   ├── 📄T_f_t_d.csv  
+│   ├── 📄V_data.csv — 기존 검증 데이터  
+│   ├── 📄V_f_data.csv  
+│   ├── 📄V_f_t.csv  
+│   ├── 📄V_f_t_d.csv  
+│   ├── 📄sensor_predictions_only.csv — 예측된 센서값만  
+│   └── 📄sensor_predictions.xlsx — 실제 vs 예측 비교 엑셀  
+│  
+├── 📂notebooks/ — 데이터 전처리 및 모델링 노트북  
+│   ├── 📄T_data_preprocess.ipynb  
+│   └── 📄V_data_preprocess.ipynb  
+│  
+├── 📂results/ — 예측 결과 및 모델 저장  
+│   ├── 📄tcn_model.pth  
+│   ├── 📄X_windows.npy  
+│   ├── 📄y_labels.npy  
+│   ├── 📄VX_windows.npy  
+│   ├── 📄Vy_labels.npy  
+│   └── 📂models/  
+│       └── 📄tcn_state_predictor.pth  
+│  
+├── 📂src/ — 소스코드 및 실행 스크립트  
+│   ├── 📄model.py — TCN 모델 정의  
+│   ├── 📄state_classifier_gui.py — 상태 분류 GUI  
+│   ├── 📄state_classifier_logistic.py — 로지스틱 분류기  
+│   ├── 📄state_gui_simulator.py — 전체 GUI 대시보드  
+│   ├── 📄T_predict_evaluate.py — 테스트 및 시각화  
+│   ├── 📄T_predict_s_window.py — 학습용 시퀀스 생성  
+│   ├── 📄T_predict_train.py — 학습 스크립트  
+│   ├── 📄tcn_predict_demo.py — 데모 실행 파일  
+│   └── 📄V_predict_s_window.py  
+│  
+└── 📄readme — 본 문서
